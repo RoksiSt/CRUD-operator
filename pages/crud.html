@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js">     
+    <link href="crud-style.css" rel="stylesheet">
+	<script src="crud.js"></script>
+	<title>CRUD</title>
+</head>
+
+<body id="body-crud">
+    <h1 id="body-header">Manage employee:</h1>
+    <form>
+	<div id="user-form">
+		<label for="name-input">Name</label>
+		<input type="text" name="name-input" id="name-input" placeholder="Name" required>
+        <label for="email-input">Email</label>
+		<input type="email" name="email-input" id="email-input" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+		<button class="create-btn" onclick="createNewItem()">Create</button>
+		<button class="update-btn" onclick="updateExistingItem()"> Update</button>
+    </div>
+    </form>
+    <table id="user-data-list"></table>
+</body>
+
+</html>
